@@ -19,6 +19,14 @@ class _NavbarState extends State<Navbar> {
     Navigator.pushNamed(context, '/');
   }
 
+  void _navigateToGallery() {
+    Navigator.pushNamed(context, '/gallery');
+  }
+
+  void _navigateToAbout() {
+    Navigator.pushNamed(context, '/about');
+  }
+
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
@@ -40,7 +48,7 @@ class _NavbarState extends State<Navbar> {
                 height: isMobile ? 60 : 80,
                 fit: BoxFit.contain,
               ),
-              
+
               // Desktop Menu
               if (!isMobile)
                 Row(
@@ -48,6 +56,10 @@ class _NavbarState extends State<Navbar> {
                     _NavLink('HOME', _navigateToHome),
                     SizedBox(width: 40),
                     _NavLink('SERVICES', _navigateToServices),
+                    SizedBox(width: 40),
+                    _NavLink('GALLERY', _navigateToGallery),
+                    SizedBox(width: 40),
+                    _NavLink('ABOUT', _navigateToAbout),
                   ],
                 )
               else
@@ -71,6 +83,10 @@ class _NavbarState extends State<Navbar> {
                   _NavLink('HOME', _navigateToHome),
                   SizedBox(height: 12),
                   _NavLink('SERVICES', _navigateToServices),
+                  SizedBox(height: 12),
+                  _NavLink('GALLERY', _navigateToGallery),
+                  SizedBox(height: 12),
+                  _NavLink('ABOUT', _navigateToAbout),
                 ],
               ),
             ),

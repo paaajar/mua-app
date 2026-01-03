@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'screens/home_screen.dart';
 import 'screens/services_screen.dart';
+import 'screens/gallery_screen.dart';
+import 'screens/about_us_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,9 +27,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomeScreen(),
         '/services': (context) => const ServicesScreen(),
+        '/gallery': (context) => const GalleryScreen(),
+        '/about': (context) => const AboutUsScreen(),
       },
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
